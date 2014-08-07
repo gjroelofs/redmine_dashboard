@@ -99,6 +99,7 @@ function contextMenuShow(event) {
 
   var target = $(event.target);
   var id = target.closest(".rdb-issue").attr("data-rdb-issue-id");
+  var token = $("meta[property='csrf-token']").attr('content'); 
 
   $.ajax({
     url: contextMenuUrl,

@@ -1,5 +1,6 @@
 / ISSUE CARD
-%div.rdb-card
+%div.{:class => "rdb-card hascontextmenu" }
+  %input{ :type=>"checkbox", :class => "hidden" }
   %div{:class => "rdb-priority rdb-priority-#{issue.priority.position}" }
     %header.rdb-card-header
       %div.rdb-card-title
