@@ -3,7 +3,7 @@
   %div{:class => "rdb-priority rdb-priority-#{issue.priority.position}" }
     %header.rdb-card-header
       %div.rdb-card-title
-        = render :partial => 'issues/context_menu', :locals => { :issue => issue }
+        = render :partial => 'rdb_dashboard/issues/issue_menu', :locals => { :issue => issue }
       %div
 
     %div.rdb-card-progress
