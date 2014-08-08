@@ -107,11 +107,10 @@ function contextMenuShow(event) {
     back_url: "/projects/poke-story/dashboard",
     ids: [ id ]
   };
-  var dataTrSer = dataTr.serialize();
 
   $.ajax({
     url: contextMenuUrl,
-    data: dataTrSer,
+    data: dataTr,
     success: function(data, textStatus, jqXHR) {
       $('#context-menu').html(data);
       menu_width = $('#context-menu').width();
