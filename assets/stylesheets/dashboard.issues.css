@@ -4,7 +4,8 @@
 
 .rdb-issue {
 	margin: 3px;
-	font-size: 12px;
+	font-size: 12px;;
+	background: #FFFFDD;
 }
 .rdb-issue-card {
 	float: left;
@@ -50,7 +51,6 @@
 	width: 180px;
 
 	border: 1px solid #ccc;
-	background: #FFFFDD;
 	border-radius: 2px;
 
 	position: relative;
@@ -160,7 +160,6 @@
 	position: relative;
 
 	border: 1px solid #ccc;
-	background: #FFFFDD;
 	border-radius: 2px;
 }
 
