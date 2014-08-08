@@ -104,7 +104,7 @@ function contextMenuShow(event) {
   var dataTr = {
     utf8: true,
     authenticity_token: token,
-    back_url = "/projects/poke-story/dashboard",
+    back_url: "/projects/poke-story/dashboard",
     ids: [ id ]
   };
   var dataTrSer = dataTr.serialize();
