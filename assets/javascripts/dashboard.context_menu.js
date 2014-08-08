@@ -99,11 +99,19 @@ function contextMenuShow(event) {
 
   var target = $(event.target);
   var id = target.closest(".rdb-issue").attr("data-rdb-issue-id");
-  var token = $("meta[property='csrf-token']").attr('content'); 
+  var token = $("meta[name='csrf-token']").attr('content'); 
+
+  var dataTr = {
+    utf8: true,
+    authenticity_token: token,
+    back_url = "/projects/poke-story/dashboard",
+    ids: [ id ]
+  };
+  var dataTrSer = dataTr.serialize();
 
   $.ajax({
     url: contextMenuUrl,
-    data: { ids: [ id ]},
+    data: dataTrSer,
     success: function(data, textStatus, jqXHR) {
       $('#context-menu').html(data);
       menu_width = $('#context-menu').width();
