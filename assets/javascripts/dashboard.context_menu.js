@@ -1,5 +1,6 @@
 var contextMenuObserving;
 var contextMenuUrl;
+var contextBackURL;
 
 function contextMenuRightClick(event) {
   var target = $(event.target);
@@ -104,7 +105,7 @@ function contextMenuShow(event) {
   var dataTr = {
     utf8: true,
     authenticity_token: token,
-    back_url: "/projects/poke-story/dashboard",
+    back_url: contextBackURL,
     ids: [ id ]
   };
 
@@ -203,8 +204,9 @@ function contextMenuClearDocumentSelection() {
   }
 }
 
-function contextMenuInit(url) {
+function contextMenuInit(url, backUrl) {
   contextMenuUrl = url;
+  contextBackURL = backUrl;
   contextMenuCreate();
   contextMenuUnselectAll();
   
