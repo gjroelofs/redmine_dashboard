@@ -27,7 +27,7 @@ function contextMenuClick(event) {
   contextMenuHide();
   if (target.is('a') || target.is('img')) { return; }
   if (event.which == 1 || (navigator.appVersion.match(/\bMSIE\b/))) {
-    var tr = $(this).closest(".rdb-issue");
+    var tr = target.closest(".rdb-issue");
     if (tr.length && tr.hasClass('hascontextmenu')) {
       // a row was clicked, check if the click was on checkbox
       if (target.is('input')) {
